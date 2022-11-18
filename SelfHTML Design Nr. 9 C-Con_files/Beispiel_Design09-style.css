@@ -1,0 +1,681 @@
+html {
+  padding: 10px 2%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+	Styles starts 
+*/
+html {
+  overflow-y: scroll;  /* Horizontale Scrollbalken erzwingen */
+}
+
+body {
+  margin: 0 auto;
+  padding-top:55px;
+  color: #444; 
+  font: normal .9em/150% Helvetica, sans-serif, Verdana;   
+  letter-spacing: 1px;
+  width: 960px;
+  background:#111111;
+  position:relative;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+a:focus, 
+a:hover, 
+a:active {
+  color: #dd4b39;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Wenn ein Element ein title-Attribut hat */
+[title] {
+  cursor: help;
+}
+
+a [title],
+a[title] {
+  cursor: pointer;
+}
+
+table {
+  margin: 15px 0;
+  border: 1px solid #355E64;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  width: 150px;
+  height: 50px;
+  font-size: .8em;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid;
+  cursor: default;
+}
+table th {
+  height: 30px;
+  background: #555555;
+  color: #FFF;
+  border: 1px solid #355e64;
+  border-right: 1px solid #FFF;
+}
+table th:nth-child(5) {
+  border-right: 1px solid #355e64;
+}
+table tfoot td {
+  height: 25px;
+  font-size: .8em;
+}
+
+/*  Skiplinks */
+#skiplinks {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+#skiplinks a:focus,
+#skiplinks a:active {
+  white-space: nowrap;
+  min-width: 250px;
+  display: block;
+  padding: 5px 15px;
+  color: #333;
+  font-weight: bold;
+  background:#888888;
+  border: 1px solid #23305a;
+  border-width: 1px 2px;
+  outline: 0;
+}
+
+
+/* Font-Family 
+
+@font-face {
+    font-family: 'MerriweatherSansRegular';
+    src: url('font/MerriweatherSans-Regular-webfont.eot');
+    src: url('font/MerriweatherSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('font/MerriweatherSans-Regular-webfont.woff') format('woff'),
+     url('font/MerriweatherSans-Regular-webfont.ttf') format('truetype'),
+     url('font/MerriweatherSans-Regular-webfont.svg#MerriweatherSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MerriweatherSansBold';
+    src: url('font/MerriweatherSans-Bold-webfont.eot');
+    src: url('font/MerriweatherSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+     url('font/MerriweatherSans-Bold-webfont.woff') format('woff'),
+     url('font/MerriweatherSans-Bold-webfont.ttf') format('truetype'),
+     url('font/MerriweatherSans-Bold-webfont.svg#MerriweatherSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*/
+#menu_contact {
+  font-family: "MerriweatherSansRegular"; 
+  font-size:.95em;
+}
+#menu_main,
+header,
+#overview h1 {
+  font-family: "Arial"; 
+  font-size:.3em;
+}
+
+
+/*
+  Box Shadows
+*/
+header {
+  box-shadow: 0 0 10px 1px #333;  
+  border-radius:0 0 5px 5px;
+  width: 200px;
+}
+#main_wrap {
+  box-shadow: 0 0 4px 4px #AAA;
+}
+#overview {
+  box-shadow: 0 0 10px 3px #33;
+}
+footer {
+  box-shadow: 0 0 10px 1px #333;
+}
+
+
+
+/* 
+      screen 
+*/
+@media screen, projection {
+
+    header {
+      height:120px;
+      min-width:500px;
+      position:absolute;
+      top:100px;
+      z-index:2;
+      left:500px;
+      text-align:center;
+      background:#66aa33;
+
+    }
+    header a, 
+    header a span {
+      color:#275caa;
+      display:block;
+    }
+    header a {
+      padding:45px 0 25px;
+    }
+    header h1 {
+      text-transform:uppercase;
+      font-size:5em;
+    }
+    header a span {
+		  padding-top:20px; 	
+      padding-left:3px;
+      font-size:0.3em;
+		  text-transform:none;
+    }
+    
+    /* Kontakt-Menu */
+    #menu_contact {    
+      margin:-20px 0 15px;
+      padding-left:5px;
+      text-transform:uppercase;
+    }
+    #menu_contact li { 
+      margin-right:20px;       
+      display:inline;
+    }
+
+
+    
+    /* 
+         Main-Wrapper 
+    */
+    #main_wrap {
+      background:#aabbcc;
+      border:5px solid #FFF;
+      border-radius:4px;
+    }
+    
+    /* Menu Main */
+    #menu_main {
+      padding:20px 0 0 25px;
+      text-transform:uppercase;
+      background:#778899;
+      border-bottom:7px solid #909bb1;      
+    }
+    #menu_main a {
+      color:#f4f5fc;
+      border-bottom:1px solid transparent;
+    }
+    #menu_main a:focus,
+    #menu_main a:hover,
+    #menu_main a:active {
+      border-bottom-color:#FFF;
+    }
+    #menu_main li {
+      margin-right:20px;
+      display:inline;
+    }
+    
+       
+    /* Slide Modul */
+    #slide_modul {
+      height:291px;
+      position:relative;
+      background:#aa5566 no-repeat -5px 0;
+    }
+    #slide_modul p.slidebutton {
+      margin:0;
+      padding:0;
+      font-size:1.6em;
+      position:absolute;
+      top:50px;
+      background:#994411;
+    }
+    #slide_modul p.slidebutton a {
+      padding:68px 5px;
+      display:block;
+      color:#F5F5F5;
+      font-weight:bold;
+    }
+    #slide_modul p.slidebutton a:focus,
+    #slide_modul p.slidebutton a:hover,
+    #slide_modul p.slidebutton a:active {
+      color:#dd4b39;
+    }
+    #slide_modul .slidetoleft {
+      left:0;
+    }
+    #slide_modul .slidetoright {
+      right:0;
+    }
+    
+    /* Quick Overview */
+    #overview {
+      margin:0 -15px -5px;
+      padding:5px 0;
+      text-align:center;
+      position:relative;
+      background:#aa0000;
+      border-radius: 30px;
+	  width: 500px;
+	  height: 200px;
+	  left: 600px;
+	  top: -180px;
+    }
+    #overview section {
+      margin-right:3px;
+      display:inline-block;
+      width:135px;
+	  height: 100px;
+      text-align:left;
+      position:relative;
+    }
+    #overview section:last-child {
+      margin-right:0;
+    }
+    #overview h1 {
+      padding:6px 10px 4px;
+      text-transform:uppercase;
+      color:#f4f5fc;
+      background:#23305a;
+      border-radius: 3px;
+    } 
+    #overview a {
+      margin-top:5px;
+      display:block;
+      height:100px;
+      border:1px solid #BBB;
+      background:url('https://wiki.selfhtml.org/images/d/df/Design-09-sprite.jpg');
+      border-radius: 5px;
+    } 
+    #overview span {
+      padding-left:10px;
+      position:absolute;
+      left:-999em;
+      width:225px;
+      font-size:.8em;
+      background:#23305a;
+      color:#f4f5fc;
+      line-height:140%;
+      opacity:.8;
+	  
+    }    
+    #overview a:focus,
+    #overview a:hover,
+    #overview a:active {
+      text-indent:0;
+      border-color:#23305a;
+      color:#999;
+    }
+    #overview a:hover span {
+      bottom:5px;
+      left:0;
+    }
+    #view_at a {
+      background-position:0 -290px;
+    }
+    #view_a a {
+      background-position:0 -590px;
+    }      
+    #view_mb a {
+       background-position:0 -880px;
+    }
+    
+    
+    /*
+      Eigentlicher Inhaltsbereich
+    */
+    main {
+      padding:90px 10px;
+		  background: none repeat scroll 0 0 #FFFFFF;
+    		border: 5px solid #FFFFFF;
+    		border-radius: 4px;
+			box-shadow: 0 0 4px 4px #AAAAAA;
+    }
+    
+    /* */
+    article,
+    #sidebar_r,
+    #sidebar_sn {
+      display:inline-block;
+      vertical-align: top;
+    }
+    
+    /* Sidebar für Suchfeld und News*/
+    aside {
+		  float:right;	
+      width:25%;
+    }
+    
+    /* Sidebar für Suchfeld und News*/
+    #sidebar_sn {
+		  float:left;	
+      margin:0 2% 0 0;
+    }
+    
+    /* Suchfeld */
+    #searchform {
+        margin-bottom:30px;
+    }    
+    aside input[type="text"] {
+        padding: 8px;   
+        width:90%;
+        font-size:.9em;
+        border: 1px solid #DDDDDD;
+        background: linear-gradient(#FFFFFF, #EEEEEE);
+        border-radius: 3px;
+        box-shadow: 0 0 2px #DDDDDD;
+    }
+    aside input[type="text"]:hover {
+        border:1px solid #cccccc;
+    }
+    aside input[type="text"]:focus {
+        box-shadow:0 0 2px #FFFE00;
+    }
+
+    /* Newsticker */
+    #newsticker h1 {
+      color:#904043;
+      font-size:1.5em;
+    }
+    #newsticker dl {
+      margin-right:10px;
+      font-style:italic;
+    }
+    #newsticker dt {
+      margin-top:15px;
+    }
+    #newsticker a {
+      font-size:.75em;
+      font-weight:bold;
+      border-bottom:1px dotted;
+    }
+    #newsticker a:focus,
+    #newsticker a:hover,
+    #newsticker a:active {
+      border-bottom-style:solid;
+    }
+    
+    #newsticker p {
+      margin:10px 0;
+      line-height:130%;
+    }
+
+    /* Article */
+    article {     
+      padding:0 25px 0 0;
+      width:70%;
+    }
+    article h1 {
+      color:#890b0f;
+      font-size:1.8em;
+      line-height:130%;
+    }
+    article p {
+      margin:20px 0;
+    }
+    article a {
+      color:#823639;
+      border-bottom:1px dotted;
+    }
+    article a:focus,
+    article a:hover,
+    article a:active {
+      border-bottom-style:solid;
+    }
+    article#startseite{
+		  width:45%;	
+		}
+    
+    /* Sidebar für Rückruf */
+    #sidebar_r {
+    }
+    #sidebar_r h1,
+    #sidebar_r h2 {
+      font-size:1.8em;
+      line-height:130%;
+      color:#904043;
+    }
+    #sidebar_r h2 {
+      margin-top:30px;
+    }
+    #sidebar_r p {
+      margin:15px 0;
+    }
+    #sidebar_r input {
+      margin:13px 0;
+      display:block;
+    }
+    input[type="submit"] {
+      padding: 5px 10px;
+      color: #fff;
+      cursor: pointer;
+      font: italic bold 1em/1.2 Georgia, "Times New Roman ", Times, Cambria, "Nimbus Roman No9 L ", serif;
+      border: 1px solid #e35061;
+      background: #c50a1f;
+      border-radius: 3px;
+    }
+    input:hover[type="submit"] {
+      border-color:#999;
+    }
+    
+    /* Network */
+    #social_buttons {
+      margin-top:25px;
+      width:150px;
+    }
+    #social_buttons li {
+      display:inline-block;
+    }
+    #social_buttons a {
+      margin:0 5px 14px 0;
+      width:38px;
+      height:38px;
+      display:inline-block;
+      text-indent:-999em;
+      background:url('https://wiki.selfhtml.org/images/c/c5/Design09-net-sprite.jpg');
+      opacity:.7;
+    }
+    #social_buttons a:focus,
+    #social_buttons a:hover,
+    #social_buttons a:active {
+      opacity:1;
+    }
+    
+    #social_buttons a#gp_button {
+      background-position:-2px -2px;
+    }
+    #social_buttons a#fb_button {
+      background-position:-55px -2px;
+    }
+    #social_buttons a#tw_button {
+      background-position:-109px -2px;
+    }
+    #social_buttons a#x_button {
+      background-position:-160px -2px;
+    }
+    #social_buttons a#l_button {
+      background-position:-211px -2px;
+    }
+    #social_buttons a#y_button {
+      background-position:-264px -2px;
+    }
+     
+    /* Footer */     
+    footer {
+      margin:-20px -10px 0;
+      padding:25px 10px 3px;
+      min-height:120px;
+      background: #f7f7f7;
+      text-align:center;
+      line-height:160%;
+      border-radius:4px;
+    }
+    footer section {
+       width:30%;
+       display:inline-block;
+       vertical-align:top;
+       text-align:left;
+    }
+    footer h2, 
+    footer h3 {
+      margin:15px 0;
+      color:#904043;
+    }
+    footer a {
+      color:#823639;
+      border-bottom:1px dotted;
+    }
+    footer a:focus,
+    footer a:hover,
+    footer a:active {
+      border-bottom-style:solid;
+    }
+    footer .copyright {
+      margin-top:40px;
+      font-size:.8em;
+    }
+		footer .copyright span {display:block;}
+    footer .fn, 
+    footer #map_button {
+      display:inline-block;
+    }
+    footer .fn {
+       margin:0 0 10px;
+       font-size:.8em;
+    }
+    footer .org {
+      font-weight:bold;
+    }
+    footer #map_button {
+      margin-top:10px;
+    }
+    /* footer ends */
+}                       
+/* 
+      screen, projection ends
+*/
+
+
+/*
+      Drucklayout
+*/
+@media print {
+}/*   print ends 
+*/
+       
+       
+/* 
+      vmtl. Tablet
+*/
+@media screen and (max-width: 960px) {
+/*   Tablet ends */
+body {width:100%;}
+#main_wrap{border:0;}
+#overview{margin:0;}
+
+main{
+	box-shadow:none;
+	border: 0px;
+	}
+article, article#startseite,section, aside,footer section, #social_buttons  {width:100%;}
+}
+
+/*       Smartphone    */
+@media screen and (max-width: 720px) {
+body {
+	padding-top:0;
+	background:white;
+}
+
+#skiplinks {
+	left:0;
+	top:0;
+	z-index:3;
+}
+
+header {
+	position:relative;
+	width:94%;
+	text-align:right;
+	padding-right:6%;
+	right:0%;
+}
+header,#main_wrap,footer {
+	background:transparent;
+	box-shadow: 0 0 0 0 transparent;
+}
+
+nav#menu_contact,
+nav#menu_main {
+	background:transparent;
+	padding-left: 0;}
+
+nav#menu_contact ul,	
+nav#menu_main ul{
+	padding:0;
+}
+nav#menu_contact ul li,	
+nav#menu_main ul li{
+	display:block;
+	background: none repeat scroll 0 0 #23305A;
+	margin: 5px 5%;
+	border-radius:10px;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	width:auto;
+}
+nav#menu_contact ul li a {color:white;}
+
+}
+/*      Smartphone ends   */
